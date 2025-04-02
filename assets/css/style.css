@@ -1,0 +1,74 @@
+/* ESTILO GERAL */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #9c2b2b, #000000);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(253, 253, 253, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2x 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+P {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/*GALERIA DE IMAGENS*/
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .gallery img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* ANIMAÇÃO DE CORAÃO */
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
