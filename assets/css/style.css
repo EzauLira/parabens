@@ -1,7 +1,6 @@
 /* ESTILO GERAL */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #9c2b2b, #000000);
+    background: linear-gradient(120deg, #6c11c0, #000000 70%);
     color: white;
     text-align: center;
     margin: 0;
@@ -9,25 +8,65 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 100px;
-    box-shadow: 0 0 10px rgba(253, 253, 253, 0.3);
+    background: linear-gradient(120deg, #4c1b7c, #1c0127 70%);
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container2 {
+    max-width: 1000px;
+    width: 100%;
+    min-height: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #000;
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container-mensagem {
+    height: 400px;
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h1,
+h2 {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
     font-size: 2.5rem;
-    text-shadow: 2x 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-P {
+h2 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-family: 'Courier New', monospace;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
-/*GALERIA DE IMAGENS*/
+/* GALERIA DE IMAGENS */
 .gallery img {
     width: 200px;
     height: 200px;
@@ -52,12 +91,12 @@ P {
     }
 }
 
-/* ANIMAÇÃO DE CORAÃO */
+/* ANIMAÇÃO DE CORAÇÃO */
 .heart {
     position: fixed;
     bottom: -50px;
     font-size: 24px;
-    color: red;
+    color: #ff4d4d;
     animation: floatUp 5s linear infinite;
 }
 
@@ -71,4 +110,39 @@ P {
         transform: translateY(-100vh);
         opacity: 0;
     }
+}
+
+.slider {
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CARROSSEL */
+.carousel {
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-container img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+}
+
+#contador {
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: white;
+    margin-top: -25px;
 }
