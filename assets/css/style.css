@@ -10,10 +10,10 @@ body {
 .container {
     max-width: 1200px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 0px;
     background: linear-gradient(120deg, #4c1b7c, #1c0127 70%);
     border-radius: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,12 +26,12 @@ body {
     min-height: 500px;
     margin: 50px auto;
     padding: 20px;
-    background: #000;
+    background: rgb(0, 0, 0);
     box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -39,29 +39,28 @@ body {
     height: 400px;
     width: 45%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     gap: 10px;
-}
-
-h1,
-h2 {
-    font-family: 'Arial', sans-serif;
-    width: 100%;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: -10%;
 }
 
 h1 {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
     font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
     font-size: 1.3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 p {
-    font-family: 'Courier New', monospace;
+    font-family: Courier;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
@@ -79,24 +78,12 @@ p {
     transform: scale(1.1);
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .gallery img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
 /* ANIMAÇÃO DE CORAÇÃO */
 .heart {
     position: fixed;
     bottom: -50px;
     font-size: 24px;
-    color: #ff4d4d;
+    color: red;
     animation: floatUp 5s linear infinite;
 }
 
@@ -120,7 +107,7 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* CARROSSEL */
+/* NOVO APARTIR DAQUI: */
 .carousel {
     width: 300px;
     height: 450px;
@@ -131,7 +118,7 @@ p {
 
 .carousel-container {
     display: flex;
-    transition: transform 1s ease-in-out;
+    transition: transform 1s;
 }
 
 .carousel-container img {
@@ -145,4 +132,38 @@ p {
     font-weight: bold;
     color: white;
     margin-top: -25px;
+}
+
+/* RESPONSIVIDADE - PARA QUE FIQUE LADO A LADO EM MOBILE */
+@media (max-width: 828px) {
+    .container2 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .carousel {
+        width: 50%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .carousel-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container-mensagem {
+        width: 50%;
+        text-align: left;
+        position: static;
+    }
+}
+
+@media (max-width: 1170px) {
+    .container2 {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
 }
